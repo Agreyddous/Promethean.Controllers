@@ -48,7 +48,13 @@ namespace Promethean.Controllers
 			return result;
 		}
 
-		protected TCommandResult CreateResponse<TCommandResult>(TCommandResult result) where TCommandResult : ICommandResult => CreateResponse(result.Code, result);
+		protected TCommandResult CreateResponse<TCommandResult>(TCommandResult result) where TCommandResult : ICommandResult
+		{
+			if (!result.Valid)
+				result.Notifications.ToList().ForEach(notification => ModelState.AddModelError(notification.Property, notification.Message));
+
+			return CreateResponse(result.Code, result);
+		}
 
 		protected TResult CreateResponse<TResult>(HttpStatusCode code, TResult result)
 		{
