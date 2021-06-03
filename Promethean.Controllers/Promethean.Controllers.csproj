@@ -6,12 +6,12 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-		<PackageReference Include="Promethean.CommandHandlers" Version="1.0.3" />
+		<PackageReference Include="Promethean.CommandHandlers" Version="1.0.4" />
 	</ItemGroup>
 
 	<PropertyGroup>
 		<PackageId>Promethean.Controllers</PackageId>
-		<Version>1.0.3</Version>
+		<Version>1.0.4</Version>
 		<Authors>Nando VBMG</Authors>
 		<Company>Nando VBMG</Company>
 	</PropertyGroup>

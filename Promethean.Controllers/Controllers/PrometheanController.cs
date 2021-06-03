@@ -23,6 +23,7 @@ namespace Promethean.Controllers
 			LogService = logService;
 		}
 
+		protected string UserIdentifier => _getClaimValue(ClaimTypes.NameIdentifier);
 		protected string UserRole => _getClaimValue(ClaimTypes.Role);
 		protected string UserName => _getClaimValue(ClaimTypes.Name);
 		protected string UserEmail => _getClaimValue(ClaimTypes.Email);
