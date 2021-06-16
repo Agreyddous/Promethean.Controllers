@@ -4,11 +4,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Promethean.CommandHandlers.DependencyInjection;
-using Promethean.CommandHandlers.Handlers;
+using Promethean.CommandHandlers.Handlers.Contracts;
 using Promethean.Controllers.Tests.Commands;
 using Promethean.Controllers.Tests.Commands.Results;
 using Promethean.Logs.DependencyInjection;
-using Promethean.Logs.Services;
+using Promethean.Logs.Services.Contracts;
 
 namespace Promethean.Controllers.Tests.Controllers
 {

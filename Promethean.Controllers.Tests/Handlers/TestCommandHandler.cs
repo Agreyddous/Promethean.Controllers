@@ -1,5 +1,5 @@
 using System.Net;
-using Promethean.CommandHandlers.Handlers;
+using Promethean.CommandHandlers.Handlers.Contracts;
 using Promethean.Controllers.Tests.Commands;
 using Promethean.Controllers.Tests.Commands.Results;
 using Promethean.Notifications;
