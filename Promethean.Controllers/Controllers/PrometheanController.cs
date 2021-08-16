@@ -60,6 +60,9 @@ namespace Promethean.Controllers
 		{
 			Response.StatusCode = (int)code;
 
+			if (code == HttpStatusCode.NoContent)
+				result = default(TResult);
+
 			return result;
 		}
 
