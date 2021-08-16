@@ -51,7 +51,7 @@ namespace Promethean.Controllers
 		protected TCommandResult CreateResponse<TCommandResult>(TCommandResult result) where TCommandResult : ICommandResult
 		{
 			if (!result.Valid)
-				result.Notifications.ToList().ForEach(notification => ModelState.AddModelError(notification.Property, notification.Message));
+				result.Notifications.ToList().ForEach(propertyNotifications => propertyNotifications.Value.ToList().ForEach(notificationMessage => ModelState.AddModelError(propertyNotifications.Key, notificationMessage.Message)));
 
 			return CreateResponse(result.Code, result);
 		}
