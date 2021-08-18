@@ -43,7 +43,7 @@ namespace Promethean.Controllers
 			LogService.Log<PrometheanController>("Output", method, new { Code = result.Code, Output = result }, LogLevel.Debug);
 
 			if (HttpContext != null)
-				CreateResponse(result);
+				result = CreateResponse(result);
 
 			return result;
 		}
